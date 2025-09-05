@@ -506,6 +506,14 @@ form {
       form .message.failure:before {
         content: '\f119'; }
 
+/* Privacy Disclaimer */
+.privacy-disclaimer {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1em;
+  line-height: 1.5;
+}
+
 label {
   color: #fff;
   display: block;
