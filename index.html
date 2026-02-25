@@ -1,68 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="Content-Security-Policy" 
+      content="style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+               font-src 'self' https://fonts.gstatic.com;">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jill.ai - Intelligence with Integrity</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        /* Brand Colors based on your Logo */
-        --bg-color: #050507; /* Deepest Gunmetal Black */
-        --card-bg: #0f1014;  /* Slightly lighter for cards */
-        --primary-cyan: #00f2ea; /* The Electric Cyan from your logo */
-        --primary-dim: rgba(0, 242, 234, 0.1);
-        
-        /* The Secondary "Break" Color (Subtle Indigo/Violet) */
-        --secondary-accent: #6366f1; 
-        
-        --text-main: #ffffff;
-        --text-muted: #94a3b8;
-        
-        --ease-smooth: cubic-bezier(0.23, 1, 0.32, 1); /* Physics-based smoothing */
-      }
 
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 100px; /* Offset for fixed header */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+    <!-- Import map for external libraries -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+        "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
       }
-      
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      ::-webkit-scrollbar {
-        display: none;
-      }
-
-      body {
-        font-family: 'Space Grotesk', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-main);
-        overflow-x: hidden;
-      }
-      h1, h2, h3, .font-heading {
-        font-family: 'Syncopate', sans-serif;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- ✅ Correct entry point for Vite -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
